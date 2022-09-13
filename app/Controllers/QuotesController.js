@@ -7,7 +7,7 @@ export class QuotesController {
 
     constructor() {
 
-
+        this.getQuote()
     }
 
 
