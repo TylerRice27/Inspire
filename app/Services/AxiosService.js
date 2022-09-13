@@ -1,9 +1,12 @@
 
 
-class AxiosService {
+export const api = axios.create({
 
-    baseURL = 'https://bcw-sandbox.herokuapp.com/api/'
 
-}
+    baseURL: 'https://bcw-sandbox.herokuapp.com/api/',
+    timeout: 12000
 
-export const api = new AxiosService()
+})
+
+
+
