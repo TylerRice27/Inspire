@@ -1,5 +1,6 @@
 
 
+// @ts-ignore
 export const api = axios.create({
 
 
