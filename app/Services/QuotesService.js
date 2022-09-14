@@ -1,10 +1,12 @@
+import { appState } from "../AppState.js"
 import { api } from "./AxiosService.js"
 
 
 class QuotesService {
-    getQuote() {
-        const res = api.get('quotes')
+    async getQuote() {
+        const res = await api.get('quotes')
         console.log("get my quote", res.data)
+        appState.quote = res.data
     }
 
 
