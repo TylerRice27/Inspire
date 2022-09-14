@@ -26,12 +26,13 @@
     margin-left: -26px; */
 }
 
-.quote {
+.author {
     display: none;
 
 }
 
-.qoute:hover {
-    visibility: visible;
-    display: show;
+.quote:hover+.author {
+    display: block;
+
+
 }

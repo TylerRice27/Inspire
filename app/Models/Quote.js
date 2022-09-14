@@ -11,9 +11,13 @@ export class Quote {
 
 
     get Template() {
-        return `
-      <h2>${this.content}</h2>
-      <h4 class="quote"> ${this.author}</h4>
+        return /*html*/`
+
+        <div class="row glass">
+        <h2 class="quote">${this.content}</h2>
+        <h4 class="author"> ${this.author}</h4>
+            
+        </div>
 `
 
     }
