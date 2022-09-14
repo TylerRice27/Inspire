@@ -1,17 +1,37 @@
 /* BASIC STYLES HERE */
-/* .glass-card {
-    background: rgb(0 0 0 / 38%);
+.glass {
+    background: rgb(0, 0, 0, 38%);
     backdrop-filter: blur(4px);
     border: solid #8d8b8b1f;
-    position: relative;
     bottom: 17em;
     color: white;
     border-radius: 8px;
     padding: 2em;
-} */
+}
 
 
 .bg-img {
     min-height: 100vh;
-    min-width: 100vw
+    min-width: 100vw;
+    background-size: cover;
+}
+
+
+
+.home-p-main {
+    text-transform: capitalize;
+    font-weight: bold;
+    /* padding-left: 25px;
+    position: relative;
+    margin-left: -26px; */
+}
+
+.quote {
+    display: none;
+
+}
+
+.qoute:hover {
+    visibility: visible;
+    display: show;
 }

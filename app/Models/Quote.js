@@ -13,7 +13,7 @@ export class Quote {
     get Template() {
         return `
       <h2>${this.content}</h2>
-      <h4> ${this.author}</h4>
+      <h4 class="quote"> ${this.author}</h4>
 `
 
     }
