@@ -3,7 +3,7 @@
 
 
 
-class todosService {
+class TodosService {
 
 
 
@@ -12,4 +12,4 @@ class todosService {
 }
 
 
-export const todosService = new todosService()
+export const todosService = new TodosService()
