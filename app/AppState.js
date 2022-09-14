@@ -16,7 +16,7 @@ class AppState extends EventEmitter {
 
   weather = loadState('weather', Weather)
 
-  image = {}
+  image = null
 }
 
 export const appState = new Proxy(new AppState(), {

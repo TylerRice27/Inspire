@@ -1,15 +1,20 @@
 import { appState } from "../AppState.js"
 import { weathersService } from "../Services/WeathersService.js"
+import { setHTML } from "../Utils/Writer.js"
 
 
-
+function _drawWeather() {
+    let template = appState.weather.Template
+    setHTML('weather', template)
+}
 
 export class WeathersController {
 
     constructor() {
+        appState.on('weather', _drawWeather)
         this.getWeather()
         this.getImage()
-        document.body.style.backgroundImage = `url('${appState.image}')`
+        // document.body.style.backgroundImage = `url('${appState.image}')`
 
     }
 
