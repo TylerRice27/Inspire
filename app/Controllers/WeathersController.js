@@ -1,3 +1,4 @@
+import { appState } from "../AppState.js"
 import { weathersService } from "../Services/WeathersService.js"
 
 
@@ -8,7 +9,11 @@ export class WeathersController {
     constructor() {
         this.getWeather()
         this.getImage()
+        document.body.style.backgroundImage = `url('${appState.image}')`
+
     }
+
+
 
     async getWeather() {
         try {

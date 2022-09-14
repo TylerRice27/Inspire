@@ -17,7 +17,8 @@ class WeathersService {
 
     async getImage() {
         const res = await api.get('images')
-        console.log("get my image", res.data)
+        console.log("get my image", res.data.largeImgUrl)
+        appState.image = res.data.largeImgUrl
     }
 
 

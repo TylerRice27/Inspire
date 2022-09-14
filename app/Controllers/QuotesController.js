@@ -1,6 +1,8 @@
 import { quotesService } from "../Services/QuotesService.js"
 
+function _draw() {
 
+}
 
 export class QuotesController {
 
@@ -8,6 +10,7 @@ export class QuotesController {
     constructor() {
 
         this.getQuote()
+        _draw()
     }
 
 
