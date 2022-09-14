@@ -8,13 +8,18 @@ function _drawWeather() {
     setHTML('weather', template)
 }
 
+function _drawImage() {
+    document.body.style.backgroundImage = `url('${appState.image}')`
+
+}
+
 export class WeathersController {
 
     constructor() {
         appState.on('weather', _drawWeather)
+        appState.on('image', _drawImage)
         this.getWeather()
         this.getImage()
-        // document.body.style.backgroundImage = `url('${appState.image}')`
 
     }
 
