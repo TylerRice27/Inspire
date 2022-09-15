@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js";
 import { Todo } from "../Models/Todo.js";
+import { saveState } from "../Utils/Store.js";
 import { api } from "./AxiosService.js"
 
 
@@ -30,6 +31,13 @@ class TodosService {
         appState.todos = appState.todos.filter(t => t.id != id)
     }
 
+    async editTodo(id) {
+        let todo = appState.todos.find(t => t.id == id)
+        todo.completed = !todo.completed
+        const res = await api.put(`tyler/todos/${todo.id}`, todo)
+        console.log("edit from serve", res.data);
+        saveState('todos', appState.todos)
+    }
 }
 
 

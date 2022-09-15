@@ -1,6 +1,7 @@
 import { appState } from "../AppState.js"
 import { todosService } from "../Services/TodosService.js"
 import { getFormData } from "../Utils/FormHandler.js"
+import { Pop } from "../Utils/Pop.js"
 import { setHTML } from "../Utils/Writer.js"
 
 function _drawTodos() {
@@ -40,6 +41,7 @@ export class TodosController {
             window.event.preventDefault()
             const form = window.event.target
             let taskData = getFormData(form)
+            form.reset()
 
             await todosService.createTodo(taskData)
 
@@ -52,7 +54,21 @@ export class TodosController {
 
     async deleteTodo(id) {
         try {
-            await todosService.deleteTodo(id)
+            if (await Pop.confirm("Do you want to delete a Todo", "Delete Todo", "Yes", "question")) {
+                await todosService.deleteTodo(id)
+
+            }
+        } catch (error) {
+            console.error(error)
+
+        }
+    }
+
+
+    async editTodo(id) {
+        try {
+            await todosService.editTodo(id)
+
         } catch (error) {
             console.error(error)
 

@@ -17,7 +17,7 @@ export class Weather {
 
             <h3>${this.temp}</h3>
             <h5>${this.name}</h5>
-                        <h5 class="home-p-main" >${this.description}</h5>
+                        <h6 class="home-p-main" >${this.description}</h6>
 
           
 
