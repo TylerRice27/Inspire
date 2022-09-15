@@ -13,10 +13,13 @@ export class Quote {
     get Template() {
         return /*html*/`
 
-        <div class="row glass">
+        <div class="row justify-content-center">
+                <div class="col-md-6 glass">
+
         <h2 class="quote">${this.content}</h2>
-        <h4 class="author"> ${this.author}</h4>
-            
+        <h4 class="on-hover"> ${this.author}</h4>
+        </div>
+
         </div>
 `
 
