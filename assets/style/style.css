@@ -37,6 +37,10 @@
 
 } */
 
+body {
+    overflow-x: hidden;
+}
+
 
 #clock {
     font-family: 'Share Tech Mono', monospace;

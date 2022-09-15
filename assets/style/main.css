@@ -2403,7 +2403,7 @@ textarea.form-control-lg {
   margin-bottom: 0.125rem;
 }
 .form-check .form-check-input {
-  float: left;
+  /* float: left; */
   margin-left: -1.5em;
 }
 
