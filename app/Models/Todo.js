@@ -12,4 +12,14 @@ export class Todo {
     }
 
 
+    get Template() {
+        return /*html*/ `
+
+
+
+
+        `
+    }
+
+
 }
