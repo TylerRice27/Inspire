@@ -17,6 +17,8 @@ export class Todo {
         <div class="mb-3 form-check">
             <input type="checkbox"  class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">${this.description}</label>
+                          <i onclick="app.todosController.deleteTodo('${this.id}')" class="mdi mdi-delete text-danger fs-5"></i>
+
           </div>
 
 

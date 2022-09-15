@@ -17,7 +17,7 @@ function currentTime() {
     hh = 12;
   }
   if (hh >= 12) {
-    // hh = hh - 12;
+    hh = hh - 12;
     session = "PM";
   }
 
@@ -34,7 +34,7 @@ currentTime();
 
 
 class App {
-  // valuesController = new ValuesController();
+  valuesController = new ValuesController();
   todosController = new TodosController()
   quotesController = new QuotesController()
   weathersController = new WeathersController()

@@ -25,6 +25,10 @@ class TodosService {
     }
 
 
+    async deleteTodo(id) {
+        const res = await api.delete(`tyler/todos/${id}`)
+        appState.todos = appState.todos.filter(t => t.id != id)
+    }
 
 }
 

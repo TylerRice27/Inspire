@@ -36,7 +36,7 @@ export class TodosController {
     async createTodo() {
 
         try {
-            debugger
+
             window.event.preventDefault()
             const form = window.event.target
             let taskData = getFormData(form)
@@ -47,6 +47,16 @@ export class TodosController {
             console.error(error)
         }
 
+    }
+
+
+    async deleteTodo(id) {
+        try {
+            await todosService.deleteTodo(id)
+        } catch (error) {
+            console.error(error)
+
+        }
     }
 
 
