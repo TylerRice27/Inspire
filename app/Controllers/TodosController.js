@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js"
 import { todosService } from "../Services/TodosService.js"
+import { getFormData } from "../Utils/FormHandler.js"
 import { setHTML } from "../Utils/Writer.js"
 
 function _drawTodos() {
@@ -24,6 +25,23 @@ export class TodosController {
     async getTodos() {
         try {
             await todosService.getTodos()
+
+        } catch (error) {
+            console.error(error)
+        }
+
+    }
+
+
+    async createTodo() {
+
+        try {
+            debugger
+            window.event.preventDefault()
+            const form = window.event.target
+            let taskData = getFormData(form)
+
+            await todosService.createTodo(taskData)
 
         } catch (error) {
             console.error(error)

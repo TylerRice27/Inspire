@@ -16,6 +16,13 @@ class TodosService {
     }
 
 
+    async createTodo(taskData) {
+        const res = await api.post('tyler/todos', taskData)
+        console.log("created tod", res.data);
+        let todo = new Todo(res.data)
+        appState.todos = [...appState.todos, todo]
+
+    }
 
 
 
