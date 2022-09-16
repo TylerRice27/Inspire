@@ -57,20 +57,20 @@ export class WeathersController {
         // let cel = appState.weather.cel
 
 
-        if (appState.weather.kelvin = appState.weather.far) {
-            document.getElementById('number').innerHTML = appState.weather.far
+        // if (kel) {
+        //     document.getElementById('number').innerHTML = appState.weather.far
 
-        }
-        if (appState.weather.far = appState.weather.cel) {
+        // }
+        // if (appState.weather.far = appState.weather.cel) {
 
-            document.getElementById('number').innerHTML = appState.weather.cel
+        //     document.getElementById('number').innerHTML = appState.weather.cel
 
-        }
+        // }
 
-        if (appState.weather.cel = appState.weather.kelvin) {
+        // if (appState.weather.cel = appState.weather.kelvin) {
 
-            document.getElementById('number').innerHTML = appState.weather.kelvin
-        }
+        //     document.getElementById('number').innerHTML = appState.weather.kelvin
+        // }
 
 
 
