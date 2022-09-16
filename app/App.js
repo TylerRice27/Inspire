@@ -21,7 +21,7 @@ function currentTime() {
     session = "PM";
   }
 
-  hh = (hh < 10) ? "0" + hh : hh;
+  hh = (hh < 10) ? "" + hh : hh;
   mm = (mm < 10) ? "0" + mm : mm;
   // ss = (ss < 10) ? "0" + ss : ss;
 

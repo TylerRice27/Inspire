@@ -12,7 +12,7 @@ export class Weather {
 
     get Template() {
         return `
-         <div class="col-md-3 text-center justify-content-end p-4">
+         <div class="col-md-2 m-1 text-center justify-content-end p-4">
           <div class="glass">
 
             <h3>${this.temp}</h3>
