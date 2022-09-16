@@ -55,6 +55,16 @@ export class WeathersController {
         let kel = appState.weather.kelvin
         let far = appState.weather.far
         let cel = appState.weather.cel
+
+
+        document.getElementById('number').innerHTML = far
+        if (far) {
+
+            document.getElementById('number').innerHTML = cel
+
+        }
+
+
         // let far = document.getElementById('number').innerHTML = (((temp - 273.15) * 1.8) + 32).toFixed() + "F";
         // if (far) {
         //     document.getElementById('number').innerHTML = ((temp - 32) / 1.8).toFixed() + "C";

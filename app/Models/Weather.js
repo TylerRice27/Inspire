@@ -35,6 +35,10 @@ export class Weather {
 
     }
 
+    get Far() {
+        return this.far
+    }
+
 
     // get TemperatureConverter() {
     //     // valNum = parseFloat(valNum);
