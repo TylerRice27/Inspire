@@ -52,26 +52,27 @@ export class WeathersController {
 
     temperatureConverter() {
         // valNum = parseFloat(valNum);
-        let kel = appState.weather.kelvin
-        let far = appState.weather.far
-        let cel = appState.weather.cel
+        // let kel = appState.weather.kelvin
+        // let far = appState.weather.far
+        // let cel = appState.weather.cel
 
 
-        document.getElementById('number').innerHTML = far
-        if (far) {
+        if (appState.weather.kelvin = appState.weather.far) {
+            document.getElementById('number').innerHTML = appState.weather.far
 
-            document.getElementById('number').innerHTML = cel
+        }
+        if (appState.weather.far = appState.weather.cel) {
+
+            document.getElementById('number').innerHTML = appState.weather.cel
 
         }
 
+        if (appState.weather.cel = appState.weather.kelvin) {
 
-        // let far = document.getElementById('number').innerHTML = (((temp - 273.15) * 1.8) + 32).toFixed() + "F";
-        // if (far) {
-        //     document.getElementById('number').innerHTML = ((temp - 32) / 1.8).toFixed() + "C";
+            document.getElementById('number').innerHTML = appState.weather.kelvin
+        }
 
-        // } else {
-        //     temp
-        // }
+
 
     }
 
