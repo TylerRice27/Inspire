@@ -13,6 +13,8 @@ function _drawImage() {
 
 }
 
+
+
 export class WeathersController {
 
     constructor() {
@@ -42,6 +44,31 @@ export class WeathersController {
             console.error(error)
         }
     }
+
+    // temperatureConverter(valNum) {
+    //     valNum = parseFloat(valNum);
+    //     document.getElementById(`${this.temp}`).innerHTML = ((valNum - 273.15) * 1.8) + 32;
+    // }
+
+    temperatureConverter() {
+        // valNum = parseFloat(valNum);
+        let kel = appState.weather.kelvin
+        let far = appState.weather.far
+        let cel = appState.weather.cel
+        // let far = document.getElementById('number').innerHTML = (((temp - 273.15) * 1.8) + 32).toFixed() + "F";
+        // if (far) {
+        //     document.getElementById('number').innerHTML = ((temp - 32) / 1.8).toFixed() + "C";
+
+        // } else {
+        //     temp
+        // }
+
+    }
+
+    // get Temp() {
+    //     let temp = appState.weather.temp
+    //     return temp
+    // }
 
 
 
