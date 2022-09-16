@@ -2,12 +2,27 @@ import { appState } from "../AppState.js"
 import { todosService } from "../Services/TodosService.js"
 import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
-import { setHTML } from "../Utils/Writer.js"
+import { setHTML, setText } from "../Utils/Writer.js"
 
 function _drawTodos() {
+    let todo = appState.todos
     let template = ''
-    appState.todos.forEach(t => template += t.Template)
-    setHTML('todos', template)
+    let completed = 0
+    let uncompleted = 0
+    todo.forEach(t => {
+        template += t.Template
+        if (t.completed) {
+            completed++
+        }
+        setText('completed', completed)
+
+        if (t.id) {
+            uncompleted++
+        }
+        setText('uncompleted', uncompleted)
+        setHTML('todos', template)
+
+    })
 
 }
 
@@ -19,6 +34,7 @@ export class TodosController {
 
         appState.on('todos', _drawTodos)
         this.getTodos()
+
 
     }
 

@@ -34,7 +34,7 @@ currentTime();
 
 
 class App {
-  valuesController = new ValuesController();
+
   todosController = new TodosController()
   quotesController = new QuotesController()
   weathersController = new WeathersController()

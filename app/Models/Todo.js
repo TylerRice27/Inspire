@@ -1,3 +1,5 @@
+
+
 export class Todo {
 
 
@@ -26,5 +28,10 @@ export class Todo {
         `
     }
 
+
+    // get Todos() {
+    //     todos = appState.todos
+    //     return todos
+    // }
 
 }

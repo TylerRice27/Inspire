@@ -37,6 +37,7 @@ class TodosService {
         const res = await api.put(`tyler/todos/${todo.id}`, todo)
         console.log("edit from serve", res.data);
         saveState('todos', appState.todos)
+        appState.todos = appState.todos
     }
 }
 
